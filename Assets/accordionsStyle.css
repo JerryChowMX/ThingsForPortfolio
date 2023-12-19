@@ -1,0 +1,111 @@
+*{
+font-family: 'Poppins', sans-serif;
+margin: 0;
+box-sizing: border-box;
+color: #fff;
+}
+
+main {
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  background: black;
+  padding: 50px;
+  background: black;
+}
+
+.accordion{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  gap: 16px;
+  transition: 0.3s;
+}
+
+.accordion:hover {
+  gap: 0px;
+}
+
+.accordion h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+  border-bottom: 
+    2px solid #fff;
+  white-space: nowrap;
+  background: none;
+}
+
+.accordion li {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 80px;
+  border-radius: 25px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.accordion li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.accordion li,
+.accordion li img,
+.accordion li .content,
+.accordion li .content span {
+  transition: 0.3s;
+}
+
+.accordion li .content {
+  position: absolute;
+  top: 50;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  color: #fff;
+  padding: 15px;
+  opacity: 0;
+  background: none;
+}
+
+.accordion li
+.content span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 50%;
+  translate: -300px 0;
+  visibility: hidden;
+  opacity: 0;
+  background: none;
+}
+
+.accordion li:hover {
+  flex: 0 1 260px;
+  scale: 1.1;
+  z-index: 10;
+  opacity: 1;
+}
+
+.accordion li:hover
+.content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion li:hover span {
+  translate: -50% 0;
+  opacity: 1;
+  visibility: visible;
+}
